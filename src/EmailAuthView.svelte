@@ -17,13 +17,13 @@
     message = ''
     loading = true
 
-    if (view == 'sign_up') {
+    if (view === 'sign_up') {
       const { error: signUpError } = await supabaseClient.auth.signUp({
         email, password
       }, { redirectTo })
 
       if (signUpError) error = signUpError.message
-    } else if (view == 'sign_in') {
+    } else if (view === 'sign_in') {
       const { error: signInError } = await supabaseClient.auth.signIn({
         email, password
       }, { redirectTo })
