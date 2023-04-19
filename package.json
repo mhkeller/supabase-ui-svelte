@@ -7,18 +7,12 @@
   "scripts": {
     "build": "rollup -c",
     "prepublishOnly": "npm run build",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
     "lint": "prettier --ignore-path .prettierignore  --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
     "format": "prettier --ignore-path .prettierignore --write --plugin-search-dir=. ."
   },
   "devDependencies": {
     "@babel/core": "^7.12.17",
     "@rollup/plugin-node-resolve": "^9.0.0",
-    "@storybook/addon-actions": "^6.1.18",
-    "@storybook/addon-essentials": "^6.1.18",
-    "@storybook/addon-links": "^6.1.18",
-    "@storybook/svelte": "^6.5.16",
     "@supabase/supabase-js": "latest",
     "babel-loader": "^8.2.2",
     "eslint-plugin-svelte3": "^3.1.1",
