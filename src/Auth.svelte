@@ -14,6 +14,11 @@
   export let socialButtonSize = 'medium'
   export let providers = []
   export let view = 'sign_in'
+<<<<<<< Updated upstream
+=======
+  export let magicLink = false;
+  export let redirectTo;
+>>>>>>> Stashed changes
 
   function setView(newView) {
     view = newView
@@ -29,14 +34,19 @@
       {socialButtonSize}
       {socialColors}
       {view}
+      {redirectTo}
     />
 
     {#if view == 'sign_in' || view == 'sign_up'}
+<<<<<<< Updated upstream
       <EmailAuthView {supabaseClient} {view} {setView}/>
+=======
+      <EmailAuthView {supabaseClient} {view} {setView} {magicLink} {redirectTo}/>
+>>>>>>> Stashed changes
     {:else if view == 'magic_link'}
-      <MagicLinkView {supabaseClient} {setView}/>
+      <MagicLinkView {supabaseClient} {setView} {redirectTo}/>
     {:else if view == 'forgotten_password'}
-      <ForgottenPasswordView {supabaseClient} {setView}/>
+      <ForgottenPasswordView {supabaseClient} {setView} {redirectTo}/>
     {/if}
   </div>
 </div>
