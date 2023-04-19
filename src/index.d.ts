@@ -11,6 +11,7 @@ export interface AuthProps {
   socialColors?: boolean
   socialButtonSize?: 'medium' | 'large'
   magicLink?: boolean
+  redirectTo?: string
 }
 
 export default class Auth extends SvelteComponentTyped<AuthProps> {}
