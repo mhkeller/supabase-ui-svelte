@@ -45,12 +45,12 @@
       {#if magicLink === true}
         <LinkButton on:click={() => setView('magic_link')}>Sign in with magic link</LinkButton>
       {/if}
-      <LinkButton on:click={() => setView('forgotten_password')}>Forgot password?</LinkButton>
       <LinkButton on:click={() => setView('sign_in')}>Do you have an account? Sign in</LinkButton>
     </div>
   {:else}
     <Button block primary size="large" {loading} icon="inbox">Sign in</Button>
     <div class="links">
+      <LinkButton on:click={() => setView('forgotten_password')}>Forgot password?</LinkButton>
       <LinkButton on:click={() => setView('sign_up')}>Don't have an account? Sign up</LinkButton>
     </div>
   {/if}
